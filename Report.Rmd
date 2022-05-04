@@ -1,0 +1,113 @@
+---
+title: "Oracle"
+output:
+  word_document:
+  fig_width: 10
+  fig_height: 6
+  fig_caption: yes
+  reference_docx: "Talking Points Template.docx"
+params:
+  n: NA
+---
+
+```{r loading, echo=FALSE, include=FALSE}
+library(rmarkdown)
+library(dplyr)
+library(readxl)
+library(shiny)
+library(readxl)
+dataAll <- read_excel("/Users/parth/Desktop/InvestIndia_Application/20220502_PIB.xlsx")
+
+keyword <- "Green"
+params$n
+keyword <- params$n
+
+dataf <- dataAll[grep(keyword, dataAll$Heading, ignore.case = TRUE), ]
+dataf <- dataf[order(-dataf$Date), ]
+```
+
+# Key Mentions
+
+<br>
+
+## 1. `r substr(dataf[1,7], 1, 100)` ...
+### `r dataf[1,6]`
+`r substr(dataf[1,9], 1, 300)`
+
+#### [Link](`r dataf[1,8]`) 
+
+<br>
+
+## 2. `r substr(dataf[2,7], 1, 100)` ...
+### `r dataf[2,6]`
+`r substr(dataf[2,9], 1, 300)`
+
+#### [Link](`r dataf[2,8]`) 
+
+<br>
+
+## 3. `r substr(dataf[3,7], 1, 100)` ...
+### `r dataf[3,6]`
+`r substr(dataf[3,9], 1, 300)`
+
+#### [Link](`r dataf[3,8]`) 
+
+<br>
+
+## 4. `r substr(dataf[4,7], 1, 100)` ...
+### `r dataf[4,6]`
+`r substr(dataf[4,9], 1, 300)`
+
+#### [Link](`r dataf[4,8]`) 
+<br>
+
+## 5. `r substr(dataf[5,7], 1, 100)` ...
+### `r dataf[5,6]`
+`r substr(dataf[5,9], 1, 300)`
+
+#### [Link](`r dataf[5,8]`) 
+
+<br>
+
+## 6. `r substr(dataf[6,7], 1, 100)` ...
+### `r dataf[6,6]`
+`r substr(dataf[6,9], 1, 300)`
+
+#### [Link](`r dataf[6,8]`)
+
+<br>
+
+## 7. `r substr(dataf[7,7], 1, 100)` ...
+### `r dataf[7,6]`
+`r substr(dataf[7,9], 1, 300)`
+
+#### [Link](`r dataf[7,8]`) 
+
+<br>
+
+## 8. `r substr(dataf[8,7], 1, 100)` ...
+### `r dataf[8,6]`
+`r substr(dataf[8,9], 1, 300)`
+
+#### [Link](`r dataf[8,8]`) 
+
+<br>
+
+## 9. `r substr(dataf[9,7], 1, 100)` ...
+### `r dataf[9,6]`
+`r substr(dataf[9,9], 1, 300)`
+
+#### [Link](`r dataf[9,8]`) 
+
+<br>
+
+## 10. `r substr(dataf[10,7], 1, 100)` ...
+### `r dataf[10,6]`
+`r substr(dataf[10,9], 1, 300)`
+
+#### [Link](`r dataf[10,8]`) 
+
+
+
+
+
